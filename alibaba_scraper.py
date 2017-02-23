@@ -10,23 +10,32 @@ res = requests.get(url)
 item_list = []
 price_list = []
 moq_list = []
+seller_list = []
 
-#Parse all items
+#create html document
 soup = BeautifulSoup(res.text, 'html.parser')
 
+#retrieve list of items being sold
 for itemclass in soup.find_all('h2', class_='title'):
 	item_list.append(itemclass.text)
 
-#Parse item prices
+#retrieve prives of items
 for price in soup.find_all('div', class_='price'):
 	price_list.append(price.text)
 
+#retrieve the minimun order quantity
 for moq in soup.find_all('div', class_='min-order'):
 	moq_list.append(moq.text)
 
-#Join items and prices together
-item_price_list = zip(item_list, price_list, moq_list[1:])
+#retrieve the list of sellers
+for seller in soup.find_all('div', class_='stitle'):
+	seller_list.append(seller.text)
+
+#Join all qualities together
+#moq_list[1:] because the first element is actually from the search bar and not an item
+item_price_list = zip(item_list, price_list, moq_list[1:], seller_list)
 
 #Put list of tuples into a dataframe and export as csv
-df = pd.DataFrame(item_price_list, columns=['item', 'price', 'moq'])
+df = pd.DataFrame(item_price_list, columns=['ITEM', 'PRICE', 'MOQ', 'SELLER'])
 df.to_csv('alibaba_itemlist.csv', index=False)
+
