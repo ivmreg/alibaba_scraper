@@ -1,8 +1,8 @@
-fairtrade
+Webscraping Alibaba
 =========
 
 .. image:: https://img.shields.io/pypi/v/fairtrade.svg
-    :target: https://pypi.python.org/pypi/fairtrade
+    :target: https://pypi.python.org/pypi
     :alt: Latest PyPI version
 
 .. image::
