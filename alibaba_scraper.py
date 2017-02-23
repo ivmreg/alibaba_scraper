@@ -3,7 +3,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 #Get HTML file
-url = r'https://www.alibaba.com/Communication-Equipment_pid100002951?spm=a2700.8190021-509.199005.29.J1Lu7S'
+url = r'https://www.alibaba.com//Gym-Equipment_pid100006579?spm=a2700.8270666-18.201612262000.106.RCusGd'
 res = requests.get(url)
 
 #List of items
