@@ -1,32 +1,40 @@
-Webscraping Alibaba
-=========
+===============================
+alibaba_scraper
+===============================
+
 
 .. image:: https://img.shields.io/pypi/v/fairtrade.svg
-    :target: https://pypi.python.org/pypi
-    :alt: Latest PyPI version
+        :target: https://pypi.python.org/pypi/fairtrade
 
-.. image::
-   :target: 
-   :alt: 
+.. image:: https://img.shields.io/travis/Engines-screaming/fairtrade.svg
+        :target: https://travis-ci.org/Engines-screaming/fairtrade
 
-fun programming project to learn about webscraping
+.. image:: https://readthedocs.org/projects/fairtrade/badge/?version=latest
+        :target: https://fairtrade.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
 
-Usage
------
+.. image:: https://pyup.io/repos/github/Engines-screaming/fairtrade/shield.svg
+     :target: https://pyup.io/repos/github/Engines-screaming/fairtrade/
+     :alt: Updates
 
-Installation
-------------
 
-Requirements
-^^^^^^^^^^^^
+Module to help scrape alibaba and several other sites
 
-Compatibility
--------------
 
-Licence
--------
+* Free software: MIT license
+* Documentation: https://fairtrade.readthedocs.io.
 
-Authors
--------
 
+Features
+--------
+
+* TODO
+
+Credits
+---------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 

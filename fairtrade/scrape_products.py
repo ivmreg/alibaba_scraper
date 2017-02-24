@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests, pprint
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -7,6 +9,7 @@ def scrape_products(url):
 	price, min order quantity, and seller name and exports the data as a csv
 	'''
 
+	#send get request to obtain html of product page
 	res = requests.get(url)
 
 	#List of items
@@ -35,10 +38,9 @@ def scrape_products(url):
 		seller_list.append(seller.text)
 
 	#Join all qualities together
-	#moq_list[1:] because the first element is actually from the search bar and not an item
+	#Use moq_list[1:] because the first element is actually from the search bar and not an item
 	item_price_list = zip(item_list, price_list, moq_list[1:], seller_list)
 
 	#Put list of tuples into a dataframe and export as csv
 	df = pd.DataFrame(item_price_list, columns=['ITEM', 'PRICE', 'MOQ', 'SELLER'])
 	df.to_csv('alibaba_itemlist.csv', index=False)
-
