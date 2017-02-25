@@ -30,6 +30,12 @@ Features
 
 * TODO
 
+- using ML to identify products from alibaba item titles to compare to products sold by retailers like amazon
+- tables for products
+	* high level overview table
+	* specifics table (delivery details, gold, )
+
+
 Credits
 ---------
 

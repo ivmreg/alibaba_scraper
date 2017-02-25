@@ -44,3 +44,10 @@ def scrape_products(url):
 	#Put list of tuples into a dataframe and export as csv
 	df = pd.DataFrame(item_price_list, columns=['ITEM', 'PRICE', 'MOQ', 'SELLER'])
 	df.to_csv('alibaba_itemlist.csv', index=False)
+
+def main():
+	url =  raw_input('Enter URL to scrape:\n')
+	scrape_products(url)
+
+if __name__ == '__main__':
+	main()
